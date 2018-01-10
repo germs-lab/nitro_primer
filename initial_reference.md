@@ -12,4 +12,5 @@ http://fungene.cme.msu.edu
 This database is developed by DOE funded group
 ```
 https://academic.oup.com/nar/article/42/19/e145/2902479
+http://cbb.pnnl.gov/portal/software/FOAM.html
 ```
