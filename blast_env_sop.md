@@ -25,12 +25,10 @@ done
 
 copy command to upper directory
 ```
-for x in *.sh;
-do cp $x ../;
-done
-``
+cp *.command.mgrast.download.sh ../
+```
 
-now, run
+now, run. Generate qsub file then run
 ```
 cat command.mgrast.download.sh | parallel
 ```
