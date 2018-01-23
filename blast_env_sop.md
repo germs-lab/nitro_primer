@@ -41,7 +41,7 @@ add command
 
 ## Convert fastq into fasta
 ```
-for x in *.fastq;do echo "cat $x | paste - - - - | sed 's/^@/>/g'| cut -f1-2 | tr '\t' '\n' > ${x%.fastq*}.fasta";done > command.diamond.sh
+for x in *.fastq;do echo "cat $x | paste - - - - | sed 's/^@/>/g'| cut -f1-2 | tr '\t' '\n' > ${x%.fastq*}.fna";done > command.diamond.sh
 cat command.diamond.sh | parallel
 ```
 
