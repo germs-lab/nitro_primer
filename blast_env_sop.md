@@ -46,9 +46,30 @@ cat command.diamond.sh | parallel
 ```
 
 ## Diamond
+make database
 ```
+module load diamond
 diamond makedb --in nifH.faa -d nifH.database
-for x in *.fasta;
+```
+then run
+for old version
+```
+mkdir temp
+for x in *.fastq;
+do echo "diamond blastx -d narG.database.dmnd -q $x -a $x -t temp";
+done > command.fastq.diamond.sh
+
+for x in *.fna;
+do echo "diamond blastx -d narG.database.dmnd -q $x -a $x -t temp";
+done > command.fna.diamond.sh
+
+for x in *.daa;
+do echo "diamond view -a $x -o $x.m8";
+done> command.view.diamond.sh
+```
+this is for new version
+```
+for x in *.fastq;
 do echo "diamond blastx -d nifH.database -q $x -o $x.matcheds.m8" > command.diamond.sh;
 done
 cat command.diamond.sh | parallel
