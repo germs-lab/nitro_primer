@@ -72,11 +72,23 @@ cat command.view.diamond.sh | parallel
 
 ```
 this is for new version
+make database
+```
+/mnt/research/germs/softwares/diamond-0.9.14/bin/diamond makedb --in narG_clustered_95.fa -d narG.databse.0.9.14
+```
+run
+
 ```
 for x in *.fastq;
-do echo "diamond blastx -d nifH.database -q $x -o $x.matcheds.m8" > command.diamond.sh;
-done
-cat command.diamond.sh | parallel
+do echo "/mnt/research/germs/softwares/diamond-0.9.14/bin/diamond blastx -d narG.databse.0.9.14 -q $x -o $x.m8";
+done > command.fastq.diamond.sh
+cat command.fastq.diamond.sh | parallel
+
+for x in *.fna;
+do echo "/mnt/research/germs/softwares/diamond-0.9.14/bin/diamond blastx -d narG.databse.0.9.14 -q $x -o $x.m8";
+done > command.fna.diamond.sh
+cat command.fna.diamond.sh | parallel
+
 ```
 
 
