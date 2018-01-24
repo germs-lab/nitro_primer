@@ -71,7 +71,7 @@ done> command.view.diamond.sh
 cat command.view.diamond.sh | parallel
 
 ```
-### this is for new version v0.9.14
+### New version v0.9.14
 make database
 ```
 /mnt/research/germs/softwares/diamond-0.9.14/bin/diamond makedb --in narG_clustered_95.fa -d narG.databse.0.9.14
