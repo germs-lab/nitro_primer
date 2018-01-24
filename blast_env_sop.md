@@ -94,5 +94,5 @@ cat command.fna.diamond.sh | parallel
 
 ## filter result of diamond
 ```
-add command
+make_count_diamond.py *.m8 > count.txt
 ```
