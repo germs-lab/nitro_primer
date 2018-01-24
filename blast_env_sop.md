@@ -58,14 +58,18 @@ mkdir temp
 for x in *.fastq;
 do echo "diamond blastx -d narG.database.dmnd -q $x -a $x -t temp";
 done > command.fastq.diamond.sh
+cat command.fastq.diamond.sh | parallel
 
 for x in *.fna;
 do echo "diamond blastx -d narG.database.dmnd -q $x -a $x -t temp";
 done > command.fna.diamond.sh
+cat command.fna.diamond.sh | parallel
 
 for x in *.daa;
 do echo "diamond view -a $x -o $x.m8";
 done> command.view.diamond.sh
+cat command.view.diamond.sh | parallel
+
 ```
 this is for new version
 ```
