@@ -46,13 +46,13 @@ cat command.diamond.sh | parallel
 ```
 
 ## Diamond
+### Old version v0.7.9.58
 make database
 ```
 module load diamond
 diamond makedb --in nifH.faa -d nifH.database
 ```
 then run
-for old version
 ```
 mkdir temp
 for x in *.fastq;
@@ -71,7 +71,7 @@ done> command.view.diamond.sh
 cat command.view.diamond.sh | parallel
 
 ```
-this is for new version
+### this is for new version v0.9.14
 make database
 ```
 /mnt/research/germs/softwares/diamond-0.9.14/bin/diamond makedb --in narG_clustered_95.fa -d narG.databse.0.9.14
